@@ -1,0 +1,36 @@
+{
+  "name": "apostrophe-svg-sprites",
+  "version": "1.0.0",
+  "description": "SVG sprite elements as Pieces",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/punkave/apostrophe-svg-sprites.git"
+  },
+  "keywords": [
+    "ApostropheCMS",
+    "apostrophe",
+    "svg"
+  ],
+  "author": "P'unk Ave",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/punkave/apostrophe-svg-sprites/issues"
+  },
+  "homepage": "https://github.com/punkave/apostrophe-svg-sprites#readme",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-punkave": "^1.0.8",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "lodash": "^4.17.4"
+  }
+}
