@@ -1,6 +1,7 @@
 # apostrophe-svg-sprites
 
 `apostrophe-images` for SVGs in external sprite maps!
+![Managing sprites with apostrophe-svg-sprites](https://github.com/apostrophecms/apostrophe-svg-sprites/raw/1.0.0/demo.gif)
 
 This bundle provides a piece subclass that manages and renders SVG sprites referenced from external maps and an accompanying widget for display.
 
