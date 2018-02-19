@@ -1,4 +1,4 @@
-apos.define('apostrophe-images-editor-modal', {
+apos.define('apostrophe-svg-sprites-editor-modal', {
   extend: 'apostrophe-pieces-editor-modal',
   transition: 'slide',
   construct: function (self, options) {

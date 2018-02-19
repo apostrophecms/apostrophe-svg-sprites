@@ -1,7 +1,7 @@
 {% extends 'editorBase.html' %}
 
 {%- block label -%}
-{{ __("Edit SVG") }}
+{{ __("Edit SVG Sprite") }}
 {%- endblock -%}
 
 {%- block filters -%}
@@ -9,9 +9,9 @@
 
 {%- block body -%}
 <div class="apos-form">
-  <div class="apos-svg-sprite-preview" data-apos-svg-sprite-preview-container></div>
+	<div class="apos-svg-sprite-preview" data-apos-svg-sprite-preview-container></div>
 	<div class="apostrophe-image-editor-fields">
-    {{ schemas.fields(data.schema) }}
-  </div>
+		{{ schemas.fields(data.schema) }}
+	</div>
 </div>
 {%- endblock -%}

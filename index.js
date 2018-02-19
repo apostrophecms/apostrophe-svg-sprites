@@ -7,7 +7,7 @@ module.exports = {
   },
 
   name: 'apostrophe-svg-sprites',
-  extend: 'apostrophe-images',
+  extend: 'apostrophe-pieces',
   alias: 'svg-sprites',
   label: 'SVG',
   pluralLabel: 'SVGs',
@@ -18,17 +18,9 @@ module.exports = {
 
   beforeConstruct: function (self, options) {
 
-    options.removeFields = ['credit', 'creditUrl', 'attachment'];
-
     var mapChoices = _.map(options.maps, function (map) {
       return { label: map.label, value: map.file }
     });
-  
-    var mainFieldNames = _.map(addFields, function (field) {
-      return field.name
-    });
-
-    mainFieldNames.push('title', 'description');
 
     options.addFields = [
       {
@@ -47,6 +39,12 @@ module.exports = {
       }
     ].concat(options.addFields || []);
 
+    var mainFieldNames = _.map(options.addFields, function (field) {
+      return field.name
+    });
+
+    mainFieldNames.unshift('title');
+
     options.arrangeFields = [
       {
         name: 'main',
@@ -62,10 +60,8 @@ module.exports = {
   },
 
   construct: function (self, options) {
-
-  },
-
-  afterConstruct: function (self) {
     self.pushAsset('stylesheet', 'apos-sprites', { when: 'user' });
+    self.pushAsset('script', 'editor-modal', { when: 'user' });
   }
+
 };

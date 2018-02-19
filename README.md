@@ -19,8 +19,6 @@ Bundle consists of
 ## Example configuration
 
 ```javascript
-// in app.js
-// We must declare the bundle!
 bundles: [ 'apostrophe-svg-sprites' ],
 modules: {
   'apostrophe-svg-sprites': {
@@ -28,12 +26,12 @@ modules: {
       {
         label: 'Social Media Icons',
         name: 'social',
-        file: 'svg/social.svg'
+        file: 'svg/social.svg' // Would be found in /public/svg/places.svg
       },
       {
         label: 'Places Icons',
         name: 'places',
-        file: 'svg/places.svg'
+        file: 'svg/places.svg' // Would be found in /public/svg/places.svg
       }
     ]
   },
