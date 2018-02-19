@@ -26,7 +26,7 @@ modules: {
       {
         label: 'Social Media Icons',
         name: 'social',
-        file: 'svg/social.svg' // Would be found in /public/svg/places.svg
+        file: 'svg/social.svg' // Would be found in /public/svg/social.svg
       },
       {
         label: 'Places Icons',
