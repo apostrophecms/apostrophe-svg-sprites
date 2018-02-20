@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/punkave/apostrophe-svg-sprites.git"
+    "url": "git+https://github.com/apostrophecms/apostrophe-svg-sprites.git"
   },
   "keywords": [
     "ApostropheCMS",
@@ -19,9 +19,9 @@
   "author": "P'unk Ave",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/punkave/apostrophe-svg-sprites/issues"
+    "url": "https://github.com/apostrophecms/apostrophe-svg-sprites/issues"
   },
-  "homepage": "https://github.com/punkave/apostrophe-svg-sprites#readme",
+  "homepage": "https://github.com/apostrophecms/apostrophe-svg-sprites#readme",
   "devDependencies": {
     "eslint": "^4.2.0",
     "eslint-config-punkave": "^1.0.8",
