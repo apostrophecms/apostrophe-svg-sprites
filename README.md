@@ -49,6 +49,7 @@ modules: {
 ```
 
 ## Example spritemap format
+Important, files must be formatted in this `<svg><symbol>...<symbol/></svg>` nesting patterin in order for import to work
 
 In `/public/svg/places.svg`
 
@@ -61,6 +62,19 @@ In `/public/svg/places.svg`
 		<path d="M17 5H3a2 2 0 0 0-2 2v9h2c0 1.65 1.34 3 3 3s3-1.35 3-3h5.5c0 1.65 1.34 3 3 3s3-1.35 3-3H23v-5l-6-6zM3 11V7h4v4H3zm3 6.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm7-6.5H9V7h4v4zm4.5 6.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM15 11V7h1l4 4h-5z" />
 	</symbol>
 </svg>
+```
+
+## Importing sprites as pieces
+To make getting started easier this module provides a command line task for parsing your sprite maps and automatically creating pieces for them. 
+
+### Requirements for import
+- Sprite maps must be formatted in a `<svg><symbol>...<symbol/></svg>` structure
+- The import uses the `maps` array from 'apostrophe-svg-sprites' configuration, so that must be set beforehand.
+- `<symbol>` tags must have an id attribute `<symbol id="my-cool-icon">....</symbol>`
+- `<symbol>` tags can optionally have a title attribute that will be used as the piece's title field `<symbol title="my cool icon">....</symbol>`
+
+```bash
+  node app.js apostrophe-svg-sprites:import
 ```
 
 ## Why use external SVG maps?

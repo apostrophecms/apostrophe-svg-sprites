@@ -62,6 +62,12 @@ module.exports = {
   construct: function (self, options) {
     self.pushAsset('stylesheet', 'apos-sprites', { when: 'user' });
     self.pushAsset('script', 'editor-modal', { when: 'user' });
-  }
+
+    self.import = require('./lib/import.js');
+  },
+
+  afterConstruct: function (self) {
+    self.apos.tasks.add(self.__meta.name, 'import', 'Imports sprites from provided SVG maps as pieces', self.import);
+  },
 
 };
