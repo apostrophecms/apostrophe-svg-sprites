@@ -49,7 +49,7 @@ modules: {
 ```
 
 ## Example spritemap format
-Important, files must be formatted in this `<svg><symbol>...<symbol/></svg>` nesting patterin in order for import to work
+Important, all `<symbol>` elements need to be peers of one another at the same node depth.
 
 In `/public/svg/places.svg`
 
@@ -68,7 +68,7 @@ In `/public/svg/places.svg`
 To make getting started easier this module provides a command line task for parsing your sprite maps and automatically creating pieces for them. 
 
 ### Requirements for import
-- Sprite maps must be formatted in a `<svg><symbol>...<symbol/></svg>` structure
+- Sprite maps must be formatted so that all `<symbol>...<symbol/>` elements are on the same node level.
 - The import uses the `maps` array from 'apostrophe-svg-sprites' configuration, so that must be set beforehand.
 - `<symbol>` tags must have an id attribute `<symbol id="my-cool-icon">....</symbol>`
 - `<symbol>` tags can optionally have a title attribute that will be used as the piece's title field `<symbol title="my cool icon">....</symbol>`
