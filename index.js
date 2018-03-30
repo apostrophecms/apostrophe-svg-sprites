@@ -68,6 +68,7 @@ module.exports = {
 
   afterConstruct: function (self) {
     self.apos.tasks.add(self.__meta.name, 'import', 'Imports sprites from provided SVG maps as pieces', self.import);
+
   },
 
 };

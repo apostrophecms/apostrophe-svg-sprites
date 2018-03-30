@@ -31,7 +31,7 @@ modules: {
       {
         label: 'Places Icons',
         name: 'places',
-        file: 'svg/places.svg' // Would be found in /public/svg/places.svg
+        file: 'svg/places-*.svg' // filename uses a wildcard because it is part of a continuous build process
       }
     ]
   },
@@ -67,7 +67,7 @@ In `/public/svg/places.svg`
 ## Importing sprites as pieces
 To make getting started easier this module provides a command line task for parsing your sprite maps and automatically creating pieces for them. 
 
-### Requirements for import
+## Requirements for import
 - Sprite maps must be formatted so that all `<symbol>...<symbol/>` elements are on the same node level.
 - The import uses the `maps` array from 'apostrophe-svg-sprites' configuration, so that must be set beforehand.
 - `<symbol>` tags must have an id attribute `<symbol id="my-cool-icon">....</symbol>`
@@ -76,6 +76,12 @@ To make getting started easier this module provides a command line task for pars
 ```bash
   node app.js apostrophe-svg-sprites:import
 ```
+
+## Automating running import
+Your SVG map might be being built by Gulp.js or Webpack constantly, which means your Apostrophe pieces have to stay in sync with changes. The `import` task automatically updates existing sprites's details on run, so you might want to run the task as part of your build process or before each deploy.
+
+### To run on each deploy
+Just add the task to the `/deployment/migrate` file using the existing example.
 
 ## Why use external SVG maps?
 
