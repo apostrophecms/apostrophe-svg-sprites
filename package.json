@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-svg-sprites",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "SVG sprite elements as Pieces",
   "main": "index.js",
   "scripts": {
