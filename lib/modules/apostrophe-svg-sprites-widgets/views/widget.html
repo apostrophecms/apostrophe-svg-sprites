@@ -1,7 +1,7 @@
 <div class="apos-svg-sprite-widget">
   {% for svg in data.widget._pieces %}
     <svg>
-      <use xlink:href="{{ svg.map }}#{{ svg.id }}"></use>
+      <use xlink:href="{{ svg.file }}#{{ svg.id }}"></use>
     </svg>
   {% endfor %}
 </div>
