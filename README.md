@@ -44,7 +44,7 @@ modules: {
 
 ```HTML
   <svg>
-    <use xlink:href="{{ svg.map }}#{{ svg.id }}"></use>
+    <use xlink:href="{{ svg.file }}#{{ svg.id }}"></use>
   </svg>
 ```
 
