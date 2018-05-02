@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "async": "^2.6.0",
-    "async-request": "^1.2.0",
     "glob": "^7.1.2",
     "lodash": "^4.17.4",
     "request": "^2.83.0",
