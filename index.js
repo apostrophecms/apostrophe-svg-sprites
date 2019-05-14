@@ -19,7 +19,7 @@ module.exports = {
   beforeConstruct: function (self, options) {
 
     var mapChoices = _.map(options.maps, function (map) {
-      return { label: map.label, value: map.file }
+      return { label: map.label, value: map.file };
     });
 
     options.addFields = [
@@ -40,7 +40,7 @@ module.exports = {
     ].concat(options.addFields || []);
 
     var mainFieldNames = _.map(options.addFields, function (field) {
-      return field.name
+      return field.name;
     });
 
     mainFieldNames.unshift('title');
@@ -62,13 +62,12 @@ module.exports = {
   construct: function (self, options) {
     self.pushAsset('stylesheet', 'apos-sprites', { when: 'user' });
     self.pushAsset('script', 'editor-modal', { when: 'user' });
-
-    self.import = require('./lib/import.js');
+    require('./lib/import.js')(self, options);
   },
 
   afterConstruct: function (self) {
     self.apos.tasks.add(self.__meta.name, 'import', 'Imports sprites from provided SVG maps as pieces', self.import);
 
-  },
+  }
 
 };
