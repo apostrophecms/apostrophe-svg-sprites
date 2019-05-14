@@ -7,7 +7,7 @@ This bundle provides a piece subclass that manages and renders SVG sprites refer
 
 This bundle assumes you are compiling/managing the SVG maps on your own (Gulp, Webpack, manual). 
 
-The bundle also assumes *either* that your shipping the files in the project level module `lib/modules/apostrophe-svg-sprites/public` or that your referencing the files on a public webserver (`http://mysite.websites/svg/icons.svg`)
+The bundle also assumes *either* that you're shipping the files in the project level folder `lib/modules/apostrophe-svg-sprites/public` or that you'r referencing the files on a public webserver (`http://mysite.websites/svg/icons.svg`)
 
 This module is *not* an interface for uploading SVG files or pasting SVG markup.
 
@@ -21,7 +21,6 @@ Bundle consists of
 ## Example configuration
 
 ```javascript
-bundles: [ 'apostrophe-svg-sprites' ],
 modules: {
   'apostrophe-svg-sprites': {
     maps: [
