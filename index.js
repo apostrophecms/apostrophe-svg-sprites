@@ -19,7 +19,7 @@ module.exports = {
   beforeConstruct: function (self, options) {
 
     var mapChoices = _.map(options.maps, function (map) {
-      return { label: map.label, value: map.file };
+      return { label: map.label, value: map.name };
     });
 
     options.addFields = [
@@ -35,7 +35,8 @@ module.exports = {
         label: 'Map',
         type: 'select',
         choices: mapChoices,
-        required: true
+        required: true,
+        readOnly: true
       }
     ].concat(options.addFields || []);
 
@@ -63,6 +64,16 @@ module.exports = {
     self.pushAsset('stylesheet', 'apos-sprites', { when: 'user' });
     self.pushAsset('script', 'editor-modal', { when: 'user' });
     require('./lib/import.js')(self, options);
+
+    var superGetListProjection = self.getListProjection;
+    self.getListProjection = function(req) {
+      var projection = superGetListProjection(req);
+      projection.file = 1;
+      projection.id = 1;
+      projection.map = 1;
+      return projection;
+    };
+
   },
 
   afterConstruct: function (self) {
