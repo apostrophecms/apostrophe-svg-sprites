@@ -18,6 +18,13 @@ module.exports = {
 
   beforeConstruct: function (self, options) {
 
+    options.listProjection = options.listProjection || {
+      title: 1,
+      _url: 1,
+      file: 1,
+      id: 1
+    };
+
     var mapChoices = _.map(options.maps, function (map) {
       return { label: map.label, value: map.file };
     });
