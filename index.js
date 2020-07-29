@@ -18,13 +18,6 @@ module.exports = {
 
   beforeConstruct: function (self, options) {
 
-    options.listProjection = options.listProjection || {
-      title: 1,
-      _url: 1,
-      file: 1,
-      id: 1
-    };
-
     var mapChoices = _.map(options.maps, function (map) {
       return { label: map.label, value: map.file };
     });
@@ -70,6 +63,15 @@ module.exports = {
     self.pushAsset('stylesheet', 'apos-sprites', { when: 'user' });
     self.pushAsset('script', 'editor-modal', { when: 'user' });
     require('./lib/import.js')(self, options);
+
+    var superGetListProjection = self.getListProjection;
+    self.getListProjection = function(req) {
+      var projection = superGetListProjection(req);
+      projection.file = 1;
+      projection.id = 1;
+      return projection;
+    };
+
   },
 
   afterConstruct: function (self) {
