@@ -21,7 +21,6 @@ module.exports = {
     var mapChoices = _.map(options.maps, function (map) {
       return { label: map.label, value: map.name };
     });
-    console.log(mapChoices);
 
     options.addFields = [
       {
@@ -71,6 +70,7 @@ module.exports = {
       var projection = superGetListProjection(req);
       projection.file = 1;
       projection.id = 1;
+      projection.map = 1;
       return projection;
     };
 
