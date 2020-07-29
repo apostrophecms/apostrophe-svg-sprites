@@ -19,8 +19,9 @@ module.exports = {
   beforeConstruct: function (self, options) {
 
     var mapChoices = _.map(options.maps, function (map) {
-      return { label: map.label, value: map.file };
+      return { label: map.label, value: map.name };
     });
+    console.log(mapChoices);
 
     options.addFields = [
       {
@@ -35,7 +36,8 @@ module.exports = {
         label: 'Map',
         type: 'select',
         choices: mapChoices,
-        required: true
+        required: true,
+        readOnly: true
       }
     ].concat(options.addFields || []);
 
